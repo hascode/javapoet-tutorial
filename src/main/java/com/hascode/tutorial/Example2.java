@@ -10,10 +10,10 @@ import com.squareup.javapoet.TypeSpec;
 
 /**
  * Generates the following code
- * 
+ *
  * <pre>
  * package com.hascode.tutorial;
- * 
+ *
  * class Counter {
  * 	public void count() {
  * 		for (int i = 0; i &lt; 10; i++) {
@@ -24,7 +24,6 @@ import com.squareup.javapoet.TypeSpec;
  * </pre>
  */
 public class Example2 {
-
 	public static void main(final String[] args) throws IOException {
 		MethodSpec count = MethodSpec.methodBuilder("count").addModifiers(Modifier.PUBLIC).beginControlFlow("for (int i = 0; i < 10; i++)").addStatement("total += i").endControlFlow().build();
 		TypeSpec counter = TypeSpec.classBuilder("Counter").addMethod(count).build();
