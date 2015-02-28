@@ -30,7 +30,7 @@ import com.squareup.javapoet.TypeSpec;
  * }
  * </pre>
  */
-public class Example5 {
+public class ConstructorsAndAnonymousInnerClassesExample {
 	public static void main(final String[] args) throws IOException {
 		MethodSpec run = MethodSpec.methodBuilder("run").addModifiers(Modifier.PUBLIC).returns(void.class).addStatement("$T.out.println($S)", System.class, "inner runs in a thread")
 				.addAnnotation(Override.class).build();

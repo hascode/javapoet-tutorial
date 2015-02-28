@@ -17,7 +17,7 @@ import com.squareup.javapoet.TypeSpec;
  * }
  * </pre></code>
  */
-public class Example1 {
+public class ClassAndMethodExample {
 	public static void main(final String[] args) throws IOException {
 		MethodSpec greetCustomer = MethodSpec.methodBuilder("greetCustomer").addModifiers(Modifier.PUBLIC).returns(String.class).addParameter(String.class, "name")
 				.addStatement("return $S+$N", "Welcome, ", "name").build();

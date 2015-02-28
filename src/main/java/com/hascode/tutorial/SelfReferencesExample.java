@@ -28,7 +28,7 @@ import com.squareup.javapoet.TypeSpec;
  * }
  * </pre>
  */
-public class Example3 {
+public class SelfReferencesExample {
 
 	public static void main(final String[] args) throws IOException {
 		MethodSpec doubleNumber = MethodSpec.methodBuilder("doubleNumber").addModifiers(Modifier.PUBLIC).addParameter(long.class, "number").returns(long.class).addStatement("return $L*2", "number")

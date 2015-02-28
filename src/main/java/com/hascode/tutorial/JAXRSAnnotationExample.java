@@ -29,7 +29,7 @@ import com.squareup.javapoet.TypeSpec;
  * </pre>
  *
  */
-public class Example4 {
+public class JAXRSAnnotationExample {
 	public static void main(final String[] args) throws IOException {
 		AnnotationSpec path = AnnotationSpec.builder(Path.class).addMember("value", "$S", "/{id}").build();
 		AnnotationSpec classParam = AnnotationSpec.builder(Path.class).addMember("value", "$S", "book").build();
@@ -42,13 +42,3 @@ public class Example4 {
 		javaFile.writeTo(System.out);
 	}
 }
-
-// @Path("book")
-// class BookService {
-// @Path("{id}")
-// @GET
-// @Produces(MediaType.APPLICATION_JSON)
-// public Response findById(@PathParam("id") final long id) {
-// return Response.ok().build();
-// }
-// }

@@ -23,7 +23,7 @@ import com.squareup.javapoet.TypeSpec;
  * }
  * </pre>
  */
-public class Example2 {
+public class ControlFlowExample {
 	public static void main(final String[] args) throws IOException {
 		MethodSpec count = MethodSpec.methodBuilder("count").addModifiers(Modifier.PUBLIC).beginControlFlow("for (int i = 0; i < 10; i++)").addStatement("total += i").endControlFlow().build();
 		TypeSpec counter = TypeSpec.classBuilder("Counter").addMethod(count).build();
